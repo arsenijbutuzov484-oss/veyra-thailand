@@ -6,8 +6,8 @@ export const siteConfig = {
   phone: "+7 988 169 53 33",
   phoneHref: "tel:+79881695333",
   email: "info@veyra-estate.ru",
-  telegramBotHandle: "@CrimeaGCRealEstate_bot",
-  telegramBotUrl: "https://t.me/CrimeaGCRealEstate_bot",
+  telegramBotHandle: "@VeyraZayavki_bot",
+  telegramBotUrl: "https://t.me/VeyraZayavki_bot",
 };
 
 export function absoluteUrl(path: string) {
