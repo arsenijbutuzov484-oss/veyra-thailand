@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     default: `${siteConfig.name} — ${siteConfig.direction}`,
     template: `%s | ${siteConfig.name}`,
   },
+  robots: process.env.SITE_PASSWORD ? { index: false, follow: false } : undefined,
 };
 
 const realEstateAgentJsonLd = {
