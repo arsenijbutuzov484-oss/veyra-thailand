@@ -93,7 +93,6 @@ export const objects: PropertyObject[] = [
       { src: "/assets/lakelayan-1.jpg", alt: "LakeLayan — лобби-терраса у бассейна", placeholder: "LakeLayan — лобби-терраса у бассейна" },
       { src: "/assets/lakelayan-2.jpg", alt: "LakeLayan — сад с пальмами и видом на горы", placeholder: "LakeLayan — сад на крыше" },
       { src: "/assets/lakelayan-3.jpg", alt: "LakeLayan — лагунный бассейн вдоль корпуса", placeholder: "LakeLayan — лагунный бассейн" },
-      { src: "/assets/lakelayan-4.jpg", alt: "LakeLayan — внутренний двор с бассейном", placeholder: "LakeLayan — внутренний двор" },
     ],
     highlights: [
       { label: "Цена от", value: "3 460 320 ฿", note: "9 023 476 ₽ · 105 123 $" },
@@ -112,8 +111,7 @@ export const objects: PropertyObject[] = [
     gallery: [
       { src: "/assets/proxima-1.webp", alt: "Proxima Villas — въездная группа на закате", placeholder: "Proxima Villas — въездная группа" },
       { src: "/assets/proxima-2.jpg", alt: "Proxima Villas — приватный бассейн вечером", placeholder: "Proxima Villas — приватный бассейн" },
-      { src: "/assets/proxima-3.png", alt: "Proxima Villas — виллы на склоне с видом на море", placeholder: "Proxima Villas — виллы на склоне" },
-      { src: "/assets/proxima-4.jpg", alt: "Proxima Villas — вид на комплекс с воздуха", placeholder: "Proxima Villas — вид с воздуха" },
+      { src: "/assets/proxima-3.jpg", alt: "Proxima Villas — вид на комплекс с воздуха", placeholder: "Proxima Villas — вид с воздуха" },
     ],
     highlights: [
       { label: "Цена от", value: "13 750 000 ฿", note: "35 855 875 ₽ · 417 800 $" },
