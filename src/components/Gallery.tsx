@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { GalleryImage } from "@/content/objects";
 
@@ -65,11 +66,12 @@ export function Gallery({ images, title }: { images: GalleryImage[]; title: stri
             return (
               <div className="gal__f" key={i}>
                 {src ? (
-                  <img
+                  <Image
                     src={src}
                     alt={image.alt}
-                    loading="lazy"
-                    decoding="async"
+                    fill
+                    sizes="(max-width: 900px) 100vw, (max-width: 1120px) 50vw, 33vw"
+                    style={{ objectFit: "cover" }}
                     onError={() => setFailed((prev) => (prev.includes(i) ? prev : [...prev, i]))}
                   />
                 ) : (
@@ -125,7 +127,14 @@ export function Gallery({ images, title }: { images: GalleryImage[]; title: stri
             onClick={() => stepPhoto(-1)}
           />
           <figure className="lb__fig">
-            <img src={currentSrc} alt={current.alt} />
+            <Image
+              src={currentSrc}
+              alt={current.alt}
+              width={1600}
+              height={1067}
+              sizes="92vw"
+              style={{ width: "auto", height: "auto" }}
+            />
             <figcaption>{`${title} — фото ${index + 1} из ${images.length}`}</figcaption>
           </figure>
           <button
