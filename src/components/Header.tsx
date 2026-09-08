@@ -5,8 +5,10 @@ export function Header({ solid = false }: { solid?: boolean } = {}) {
   return (
     <header className={`hdr${solid ? " hdr--solid" : ""}`} id="hdr">
       <div className="wrap">
-        <Link href="/thailand#top" className="logo">
-          Veyra<b>&nbsp;Estate</b>
+        <Link href="/thailand#top" className="logo" aria-label="VEYRA ESTATE">
+          <span>
+            Veyra<b>&nbsp;Estate</b>
+          </span>
         </Link>
         <nav className="nav" id="nav">
           {navItems.map((item) => (
@@ -15,7 +17,12 @@ export function Header({ solid = false }: { solid?: boolean } = {}) {
             </Link>
           ))}
         </nav>
-        <a className="btn" href={siteConfig.telegramBotUrl} target="_blank" rel="noopener">
+        <a
+          className="btn hdr__tg"
+          href={siteConfig.telegramBotUrl}
+          target="_blank"
+          rel="noopener"
+        >
           Задать вопрос в Telegram
         </a>
         <button className="burger" id="burger" aria-label="Меню" aria-expanded="false">

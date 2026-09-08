@@ -102,8 +102,12 @@ export async function submitLead(
   const scenarioRaw = String(formData.get("scenario") ?? "").trim();
   const consent = formData.get("consent");
 
-  if (!name || !phone || !consent) {
-    return { status: "error", message: "Заполните имя, телефон и согласие на обработку данных." };
+  if (!name || !consent || (!phone && !telegram)) {
+    return {
+      status: "error",
+      message:
+        "Заполните имя, хотя бы один способ связи и согласие на обработку данных. Либо напишите напрямую:",
+    };
   }
   const budget = budgetOptions.includes(budgetRaw) ? budgetRaw : "";
   const scenario = scenarioOptions.includes(scenarioRaw) ? scenarioRaw : "";

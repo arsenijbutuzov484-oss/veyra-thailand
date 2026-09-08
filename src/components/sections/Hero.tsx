@@ -1,19 +1,12 @@
 import Image from "next/image";
-import { siteConfig } from "@/lib/site";
-
-const counters = [
-  { v: "12 лет", k: "на рынке недвижимости" },
-  { v: "300+", k: "сделок, проведённых агентством" },
-  { v: "30+", k: "параметров проверки сделки в нашем регламенте" },
-];
 
 export function Hero() {
   return (
     <section className="hero" id="top" data-screen-label="Hero">
-      <div className="hero__bg" id="heroBg">
+      <div className="hero__bg ph" id="heroBg">
         <Image
           src="/images/hero.jpg"
-          alt="Побережье Таиланда с высоты — известняковые скалы и бирюзовая вода"
+          alt="Побережье Пхукета"
           fill
           priority
           sizes="100vw"
@@ -22,30 +15,28 @@ export function Hero() {
       </div>
       <div className="hero__scrim" />
       <div className="wrap">
-        <h1>В Таиланде покупают не вид на море, а актив с юридической формой и расходами</h1>
-        <p className="hero__sub">
-          Мы разбираем локацию, форму владения, полную стоимость владения и сценарий
-          использования — до того, как Вы внесёте первый транш. Показываем расчёт с допущениями и
-          договор застройщика, а не рендер и обещанную доходность.
+        <p className="hero__rubric">
+          <i>00</i>Недвижимость в Таиланде
         </p>
-        <p className="hero__pos">Обрести истинное — значит понимать, чем Вы владеете.</p>
+        <h1>
+          Пространство{" "}
+          <br />
+          для жизни и капитала
+        </h1>
+        <p className="hero__sub">
+          Пять сценариев входа на тайский рынок, объекты от $80 000{" "}
+          <br />и 30+ параметров проверки до первого транша
+        </p>
         <div className="hero__cta">
-          <a className="btn" href="#form">
-            Разобрать сценарий
+          <a className="btn" href="#objects">
+            Подобрать недвижимость
           </a>
-          <a className="btn btn--ghost" href={siteConfig.telegramBotUrl} target="_blank" rel="noopener">
-            Задать вопрос в Telegram
-          </a>
-        </div>
-        <div className="counters">
-          {counters.map((c) => (
-            <div key={c.k}>
-              <p className="v">{c.v}</p>
-              <p className="k">{c.k}</p>
-            </div>
-          ))}
         </div>
       </div>
+      <a className="cue" href="#approach" aria-label="К разделам разбора">
+        <span>06 разделов разбора</span>
+        <i />
+      </a>
     </section>
   );
 }

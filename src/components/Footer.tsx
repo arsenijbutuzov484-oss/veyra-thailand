@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { legalLinks, navItems, siteConfig } from "@/lib/site";
 
+const mailSubject = encodeURIComponent("Запрос по недвижимости в Таиланде");
+
 export function Footer() {
   return (
     <footer className="ftr">
@@ -8,18 +10,20 @@ export function Footer() {
         <div className="ftr__top">
           <div>
             <p className="logo">
-              Veyra<b>&nbsp;Estate</b>
+              <span>
+                Veyra<b>&nbsp;Estate</b>
+              </span>
             </p>
-            <p style={{ marginTop: 18, maxWidth: "44ch" }}>
-              Направление «Недвижимость в Таиланде»: инвестиции, аренда под управлением, зимовка и
-              релокация. Пхукет, Самуи, Паттайя, Бангкок.
+            <p style={{ marginTop: 16, maxWidth: "44ch" }}>
+              Направление «Инвестиции в недвижимость Таиланда»: Пхукет и Паттайя — инвестиции,
+              аренда под управлением, зимовка, релокация.
             </p>
             <p
               style={{
-                marginTop: 20,
+                marginTop: 18,
                 fontFamily: "var(--font-serif)",
                 fontStyle: "italic",
-                color: "var(--sand)",
+                color: "var(--gold)",
               }}
             >
               VEYRA ESTATE. Обрести истинное
@@ -42,7 +46,9 @@ export function Footer() {
                 <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
               </li>
               <li>
-                <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+                <a href={`mailto:${siteConfig.email}?subject=${mailSubject}`}>
+                  {siteConfig.email}
+                </a>
               </li>
               <li>
                 <a href={siteConfig.telegramBotUrl} target="_blank" rel="noopener">
