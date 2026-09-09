@@ -76,7 +76,7 @@ export const objects: PropertyObject[] = [
       },
     ],
     highlights: [
-      { label: "Цена от", value: "3 307 500 ฿", note: "8 624 967 ₽ · 100 480 $" },
+      { label: "Цена от", value: "3 307 500 ฿", note: "8 624 967 ₽ · 100 480 $" },
       { label: "Стадия", value: "Котлован, 2028" },
       { label: "Форма владения", value: "Freehold / leasehold" },
     ],
@@ -95,7 +95,7 @@ export const objects: PropertyObject[] = [
       { src: "/assets/lakelayan-3.jpg", alt: "LakeLayan — лагунный бассейн вдоль корпуса", placeholder: "LakeLayan — лагунный бассейн" },
     ],
     highlights: [
-      { label: "Цена от", value: "3 460 320 ฿", note: "9 023 476 ₽ · 105 123 $" },
+      { label: "Цена от", value: "3 460 320 ฿", note: "9 023 476 ₽ · 105 123 $" },
       { label: "Статус", value: "Котлован, 2028" },
       { label: "Форма владения", value: "Freehold, Chanote" },
     ],
@@ -114,7 +114,7 @@ export const objects: PropertyObject[] = [
       { src: "/assets/proxima-3.jpg", alt: "Proxima Villas — вид на комплекс с воздуха", placeholder: "Proxima Villas — вид с воздуха" },
     ],
     highlights: [
-      { label: "Цена от", value: "13 750 000 ฿", note: "35 855 875 ₽ · 417 800 $" },
+      { label: "Цена от", value: "13 750 000 ฿", note: "35 855 875 ₽ · 417 800 $" },
       { label: "Статус", value: "Сдан в IV кв. 2024" },
       { label: "Форма владения", value: "Freehold (квота)" },
     ],
@@ -133,7 +133,7 @@ export const objects: PropertyObject[] = [
       { src: "/assets/radisson-4.jpg", alt: "Radisson Next Point — внутренний двор с бассейном вечером", placeholder: "Radisson Next Point — внутренний двор" },
     ],
     highlights: [
-      { label: "Цена от", value: "$890 000" },
+      { label: "Цена от", value: "29 296 130 ฿", note: "76 395 464 ₽ · 890 000 $" },
       { label: "Сдача", value: "II кв. 2027" },
       { label: "Форма владения", value: "Leasehold 30+30+30" },
     ],
@@ -152,7 +152,7 @@ export const objects: PropertyObject[] = [
       { alt: "Pratumnak Line — фото 3", placeholder: "Паттайя — интерьер апартаментов, 1600×1200" },
     ],
     highlights: [
-      { label: "Цена от", value: "$80 000" },
+      { label: "Цена от", value: "$80 000" },
       { label: "Статус", value: "Сдан, 2025" },
       { label: "Форма владения", value: "Freehold (квота)" },
     ],
