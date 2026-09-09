@@ -152,7 +152,7 @@ export const objects: PropertyObject[] = [
       { alt: "Pratumnak Line — фото 3", placeholder: "Паттайя — интерьер апартаментов, 1600×1200" },
     ],
     highlights: [
-      { label: "Цена от", value: "$80 000" },
+      { label: "Цена от", value: "2 633 360 ฿", note: "6 867 008 ₽ · 80 000 $" },
       { label: "Статус", value: "Сдан, 2025" },
       { label: "Форма владения", value: "Freehold (квота)" },
     ],
