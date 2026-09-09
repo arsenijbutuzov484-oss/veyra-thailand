@@ -10,9 +10,9 @@ export function Footer() {
         <div className="ftr__top">
           <div>
             <p className="logo">
-              <span>
-                Veyra<b>&nbsp;Estate</b>
-              </span>
+              {/* SVG: next/image has nothing to optimise and needs dangerouslyAllowSVG */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/assets/veyra-lockup.svg" alt="VEYRA ESTATE" width={130} height={96} />
             </p>
             <p style={{ marginTop: 16, maxWidth: "44ch" }}>
               Направление «Инвестиции в недвижимость Таиланда»: Пхукет и Паттайя — инвестиции,

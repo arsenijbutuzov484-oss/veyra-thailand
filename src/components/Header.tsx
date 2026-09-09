@@ -6,6 +6,9 @@ export function Header({ solid = false }: { solid?: boolean } = {}) {
     <header className={`hdr${solid ? " hdr--solid" : ""}`} id="hdr">
       <div className="wrap">
         <Link href="/thailand#top" className="logo" aria-label="VEYRA ESTATE">
+          {/* SVG: next/image has nothing to optimise and needs dangerouslyAllowSVG */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/assets/veyra-mark.svg" alt="" width={52} height={36} />
           <span>
             Veyra<b>&nbsp;Estate</b>
           </span>
