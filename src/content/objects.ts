@@ -97,7 +97,7 @@ export const objects: PropertyObject[] = [
     priceFromThb: 3_460_320,
     highlights: [
       { label: "Статус", value: "Котлован, 2028" },
-      { label: "Форма владения", value: "Freehold, Chanote" },
+      { label: "Форма владения", value: "Freehold / leasehold" },
     ],
   },
   {
@@ -116,7 +116,7 @@ export const objects: PropertyObject[] = [
     priceFromThb: 13_750_000,
     highlights: [
       { label: "Статус", value: "Сдан в IV кв. 2024" },
-      { label: "Форма владения", value: "Freehold (квота)" },
+      { label: "Форма владения", value: "Freehold / leasehold" },
     ],
   },
   {
@@ -135,7 +135,7 @@ export const objects: PropertyObject[] = [
     priceFromThb: 29_296_130,
     highlights: [
       { label: "Сдача", value: "II кв. 2027" },
-      { label: "Форма владения", value: "Leasehold 30+30+30" },
+      { label: "Форма владения", value: "Freehold / leasehold" },
     ],
   },
   {
