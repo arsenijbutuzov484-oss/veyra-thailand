@@ -1,6 +1,7 @@
 import { objects } from "@/content/objects";
 import { Gallery } from "@/components/Gallery";
 import { ObjectCtaButton } from "@/components/ObjectInterest";
+import { priceFromBaht } from "@/lib/currency";
 
 export function Objects() {
   return (
@@ -11,7 +12,9 @@ export function Objects() {
         </p>
         <h2 className="h2">Пять точек входа, из которых видно логику выбора</h2>
         <div className="objs">
-          {objects.map((object) => (
+          {objects.map((object) => {
+            const price = priceFromBaht(object.priceFromThb);
+            return (
             <article className="card" key={object.slug}>
               <div className="card__ph">
                 <span className="card__badge">{object.badge}</span>
@@ -22,17 +25,17 @@ export function Objects() {
                 <h3>{object.title}</h3>
                 <p>{object.tagline}</p>
                 <ul className="spex">
+                  <li>
+                    <span>Цена от</span>
+                    <b className="price">
+                      {price.main}
+                      <em>{price.note}</em>
+                    </b>
+                  </li>
                   {object.highlights.map((spec) => (
                     <li key={spec.label}>
                       <span>{spec.label}</span>
-                      {spec.note ? (
-                        <b className="price">
-                          {spec.value}
-                          <em>{spec.note}</em>
-                        </b>
-                      ) : (
-                        <b>{spec.value}</b>
-                      )}
+                      <b>{spec.value}</b>
                     </li>
                   ))}
                 </ul>
@@ -44,7 +47,8 @@ export function Objects() {
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
           <article className="card card--dark">
             <div className="card__body">
               <p className="card__loc">Не публикуется</p>

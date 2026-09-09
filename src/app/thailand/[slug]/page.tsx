@@ -7,6 +7,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { ObjectInterestProvider } from "@/components/ObjectInterest";
 import { LeadForm } from "@/components/sections/LeadForm";
 import { getObjectBySlug, objects } from "@/content/objects";
+import { exchange, priceFromBaht } from "@/lib/currency";
 import { absoluteUrl } from "@/lib/site";
 
 type Params = { slug: string };
@@ -42,7 +43,7 @@ export default async function ObjectPage({ params }: { params: Promise<Params> }
   const object = getObjectBySlug(slug);
   if (!object) notFound();
 
-  const priceSpec = object.highlights[0];
+  const price = priceFromBaht(object.priceFromThb);
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -53,7 +54,8 @@ export default async function ObjectPage({ params }: { params: Promise<Params> }
         "@type": "Offer",
         url: absoluteUrl(`/thailand/${object.slug}`),
         availability: "https://schema.org/InStock",
-        priceSpecification: { "@type": "PriceSpecification", description: priceSpec?.value },
+        price: price.thb,
+        priceCurrency: "THB",
       },
     },
     {
@@ -86,6 +88,10 @@ export default async function ObjectPage({ params }: { params: Promise<Params> }
           <h1>{object.title}</h1>
           <p className="obj-hero__tagline">{object.description ?? object.tagline}</p>
           <div className="obj-params">
+            <div>
+              <span>Цена от</span>
+              <b>{price.main}</b>
+            </div>
             {object.highlights.map((spec) => (
               <div key={spec.label}>
                 <span>{spec.label}</span>
@@ -93,6 +99,9 @@ export default async function ObjectPage({ params }: { params: Promise<Params> }
               </div>
             ))}
           </div>
+          <p className="note" style={{ marginTop: 14, color: "rgba(242,237,228,.5)" }}>
+            {price.note} · курс на {exchange.updated}
+          </p>
           <div className="hero__cta" style={{ marginTop: 30, justifyContent: "flex-start" }}>
             <a className="btn" href="#form">
               Разобрать сценарий
